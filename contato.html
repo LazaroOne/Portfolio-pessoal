@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lázaro G. - Contato</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Lázaro Gabriel </h1>
+
+    <p><strong>Estudante do 3º ano do ensino médio + Curso técnico em informática</strong></p>
+    
+    <nav>
+        <ul>
+          <li><a href="ptflo.html">Início</a></li>
+          <li><a href="habilidades.html">Habilidades</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    <!-- cabeçalho -->
+  </header>
+  <section class="contact">
+    <h3>Entre em Contato!</h3>
+    <form onsubmit="return submitForm()">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required><br>
+      <label for="message">Mensagem:</label><br>
+      <textarea id="message" rows="4" required></textarea><br>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="confirmation"></p>
+  </section>
+
+    
+  </section>
+  <footer>
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+      }
+  
+      function submitForm() {
+        var name = document.getElementById('name').value;
+        document.getElementById('confirmation').innerText = `Olá ${name}, sua mensagem foi enviada com sucesso!`;
+        return false;
+      }
+    </script>
+    <!-- rodapé -->
+    <div class="instatext">
+      <a href="https://www.instagram.com/_lazarogabriel_/">
+        <img class="insta" src="InstaLogo.svg" alt="Logo do Instagram">
+        <p>Instagram</p>
+      </a>
+    </div>
+
+  </footer>
+</body>
+</html>
